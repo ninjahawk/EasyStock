@@ -3,28 +3,28 @@
 #the program will automatically sell the stock.
 #But if the stock decreases by a cerain amount, the program
 #will also sell the stock, making an indefinite amount of loss or 
-#gain. Even if the company goes out of buisness, your money 
-#will be safe. Because the program will have taken it out 
-#when it reaches the max low you specified.
-
-account_value = 400
-initial_stock_price = 100
-target_stock_price = initial_stock_price + 50
-low_stock_price = initial_stock_price - 50
+#gain.
 
 def target_sell_stock():
-	add_money_back = account_value + target_stock_price
-    print(add_money_back)
+	add_money_back = account_value + 50
+    	print(add_money_back)
 
 def low_sell_stock():
-    AddMoneyBack = account_value + low_stock_price
-    print(AddMoneyBack)
+    	AddMoneyBack = account_value - 50
+    	print(AddMoneyBack)
 
-if (initial_stock_price == target_stock_price):
-    command = target_sell_stock
+account_value = 400
+current_stock_price = 50
+target_stock_price = 150
+low_stock_price = 50
 
-elif (initial_stock_price == low_stock_price):
-	command = low_stock_price
+while current_stock_price:
 
-else:
-	print("Wait it out")
+	if (current_stock_price == target_stock_price):
+    		command = target_sell_stock()
+
+	elif (current_stock_price == low_stock_price):
+		command = low_sell_stock
+		low_sell_stock()
+	else:
+		print("Wait it out")
