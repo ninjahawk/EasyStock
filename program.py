@@ -24,7 +24,7 @@ while current_stock_price:
     		command = target_sell_stock()
 
 	elif (current_stock_price == low_stock_price):
-		command = low_sell_stock
-		low_sell_stock()
+		command = low_sell_stock()
+		
 	else:
 		print("Wait it out")
